@@ -1,0 +1,174 @@
+/* Scene 3 Framework Selection Styles */
+
+.scene3 .scene-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.frameworks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.framework-card {
+  background: var(--clean-white);
+  border: 3px solid var(--border-gray);
+  border-radius: 12px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.framework-card:hover {
+  border-color: var(--accent-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.framework-card.selected {
+  border-color: var(--jus-blue);
+  background: rgba(30, 58, 138, 0.02);
+}
+
+.framework-image {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.framework-image img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid var(--border-gray);
+}
+
+.framework-card.selected .framework-image img {
+  border-color: var(--jus-blue);
+}
+
+.framework-info h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: var(--jus-blue);
+}
+
+.framework-description {
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: var(--professional-gray);
+}
+
+.framework-process {
+  font-size: 0.875rem;
+  color: var(--professional-gray);
+  background: var(--light-gray);
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.framework-best-for {
+  font-size: 0.875rem;
+  color: var(--jus-blue);
+  text-align: center;
+}
+
+.framework-best-for strong {
+  color: var(--jus-blue);
+}
+
+.selection-indicator {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--success-green);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* ALEX Analysis Styles (reuse from Scene 2) */
+.alex-analysis {
+  background: var(--light-gray);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-left: 4px solid var(--accent-blue);
+}
+
+.alex-character {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.alex-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--accent-blue);
+  padding: 0.5rem;
+}
+
+.alex-dialogue {
+  flex: 1;
+}
+
+.alex-dialogue h3 {
+  color: var(--accent-blue);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.alex-dialogue p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Selection Prompt */
+.selection-prompt {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .frameworks-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .alex-character {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .alex-avatar {
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .framework-card {
+    padding: 1rem;
+  }
+  
+  .framework-image img {
+    max-width: 200px;
+  }
+  
+  .alex-analysis {
+    padding: 1.5rem;
+  }
+}

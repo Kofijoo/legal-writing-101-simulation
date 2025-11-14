@@ -1,0 +1,22 @@
+# Development folders
+01_design_documents/
+02_storyboards/
+03_asset_specifications/
+04_content_development/
+
+# React development files
+05_react_development/node_modules/
+05_react_development/build/
+05_react_development/src/
+05_react_development/public/
+05_react_development/package*.json
+05_react_development/.gitignore
+
+# Only keep built files and assets for hosting
+!static/
+!*.html
+!*.png
+!*.jpg
+!*.jpeg
+!*.gif
+!*.svg
