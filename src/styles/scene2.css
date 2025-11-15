@@ -1,0 +1,272 @@
+/* Scene 2 - Learner Personas Styles */
+
+.scene2 {
+  background-color: var(--light-gray);
+}
+
+.scene2 .scene-content {
+  max-width: 1400px;
+}
+
+.scene2 .scene-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.scene2 .scene-header h2 {
+  color: var(--jus-blue);
+  font-size: 2rem;
+  margin-bottom: var(--spacing-md);
+  font-weight: var(--font-weight-bold);
+}
+
+.scene2 .instruction {
+  font-size: 1.125rem;
+  color: var(--professional-gray);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Personas Grid */
+.personas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.persona-card {
+  background: var(--clean-white);
+  border: 3px solid var(--border-gray);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-lg);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  position: relative;
+  box-shadow: var(--shadow-md);
+  height: fit-content;
+}
+
+.persona-card:hover {
+  border-color: var(--accent-blue);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.persona-card.selected {
+  border-color: var(--jus-blue);
+  background: rgba(30, 58, 138, 0.02);
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+/* Persona Image */
+.persona-image {
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.persona-image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--border-gray);
+  transition: border-color var(--transition-fast);
+}
+
+.persona-card.selected .persona-image img {
+  border-color: var(--jus-blue);
+}
+
+/* Persona Info */
+.persona-info h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-xs);
+  text-align: center;
+  color: var(--jus-blue);
+  font-weight: var(--font-weight-bold);
+}
+
+.persona-info h4 {
+  font-size: 0.875rem;
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+  color: var(--professional-gray);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.persona-description {
+  text-align: center;
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-md);
+  color: var(--dark-gray);
+  font-size: 0.875rem;
+}
+
+/* Persona Needs */
+.persona-needs {
+  margin-bottom: var(--spacing-md);
+  background: var(--light-gray);
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-md);
+}
+
+.persona-needs h5 {
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--jus-blue);
+  margin-bottom: var(--spacing-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.persona-needs p {
+  font-size: 0.875rem;
+  color: var(--professional-gray);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Persona Quote */
+.persona-quote {
+  font-style: italic;
+  text-align: center;
+  color: var(--jus-blue);
+  font-weight: var(--font-weight-semibold);
+  margin: 0;
+  padding: var(--spacing-sm);
+  background: rgba(30, 58, 138, 0.05);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--jus-blue);
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+/* Selection Indicator */
+.selection-indicator {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  background: var(--success-green);
+  color: var(--clean-white);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-lg);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-semibold);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ALEX Analysis */
+.alex-analysis {
+  background: var(--clean-white);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+  border: 1px solid var(--border-gray);
+  box-shadow: var(--shadow-md);
+}
+
+.alex-character {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-lg);
+}
+
+.alex-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent-blue);
+  flex-shrink: 0;
+}
+
+.alex-dialogue {
+  flex: 1;
+}
+
+.alex-dialogue h3 {
+  color: var(--accent-blue);
+  margin-bottom: var(--spacing-md);
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.alex-dialogue p {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.6;
+  color: var(--dark-gray);
+}
+
+.alex-question {
+  background: rgba(59, 130, 246, 0.08);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  margin: var(--spacing-md) 0;
+  border-left: 3px solid var(--accent-blue);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.alex-question strong {
+  color: var(--accent-blue);
+  display: block;
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Selection Prompt */
+.selection-prompt {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.selection-prompt .feedback {
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  font-weight: var(--font-weight-semibold);
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--warning-orange);
+  border: 2px solid rgba(245, 158, 11, 0.2);
+  display: inline-block;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .personas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .personas-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  .alex-character {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .persona-card {
+    padding: var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .persona-image img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .alex-analysis {
+    padding: var(--spacing-md);
+  }
+  
+  .alex-avatar {
+    width: 60px;
+    height: 60px;
+  }
+}

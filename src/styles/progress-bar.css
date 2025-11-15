@@ -1,0 +1,140 @@
+/* Progress Bar Styles */
+
+.progress-bar-container {
+  background: var(--clean-white);
+  border-bottom: 1px solid var(--border-gray);
+  padding: var(--spacing-md) 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
+}
+
+.scene-indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  gap: var(--spacing-xs);
+}
+
+.scene-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  min-width: 120px;
+  text-align: center;
+}
+
+.scene-indicator:hover {
+  background-color: var(--light-gray);
+}
+
+.scene-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-semibold);
+  transition: all var(--transition-fast);
+}
+
+.scene-label {
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.2;
+  transition: color var(--transition-fast);
+}
+
+/* Upcoming Scene */
+.scene-indicator.upcoming .scene-number {
+  background-color: var(--border-gray);
+  color: var(--professional-gray);
+}
+
+.scene-indicator.upcoming .scene-label {
+  color: var(--professional-gray);
+}
+
+/* Current Scene */
+.scene-indicator.current .scene-number {
+  background-color: var(--jus-blue);
+  color: var(--clean-white);
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.2);
+}
+
+.scene-indicator.current .scene-label {
+  color: var(--jus-blue);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Completed Scene */
+.scene-indicator.completed .scene-number {
+  background-color: var(--success-green);
+  color: var(--clean-white);
+}
+
+.scene-indicator.completed .scene-label {
+  color: var(--success-green);
+}
+
+.scene-indicator.completed .scene-number::after {
+  content: '✓';
+  font-size: 0.75rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .scene-indicators {
+    gap: 0;
+    overflow-x: auto;
+    padding: 0 var(--spacing-sm);
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .scene-indicators::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scene-indicator {
+    min-width: 80px;
+    flex-shrink: 0;
+  }
+  
+  .scene-label {
+    font-size: 0.625rem;
+  }
+  
+  .scene-number {
+    width: 28px;
+    height: 28px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .scene-indicator {
+    min-width: 60px;
+  }
+  
+  .scene-label {
+    display: none;
+  }
+  
+  .scene-number {
+    width: 24px;
+    height: 24px;
+    font-size: 0.625rem;
+  }
+}
