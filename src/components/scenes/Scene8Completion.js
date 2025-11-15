@@ -14,7 +14,7 @@ const Scene8Completion = () => {
   }, [dispatch]);
 
   const handleRestart = () => {
-    window.location.href = '/';
+    navigate('/');
   };
 
   const handleBack = () => {
@@ -52,7 +52,7 @@ const Scene8Completion = () => {
 
       <div className="alex-final">
         <div className="alex-character">
-          <img src="/ALEX_avatar.png" alt="ALEX" className="alex-avatar" />
+          <img src={`${process.env.PUBLIC_URL}/ALEX_avatar.png`} alt="ALEX" className="alex-avatar" />
           <div className="alex-dialogue">
             <h3>ALEX Final Analysis</h3>
             <p>Congratulations! You've created a comprehensive training design that balances stakeholder needs, learning objectives, and practical constraints.</p>

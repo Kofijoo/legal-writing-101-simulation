@@ -4,7 +4,7 @@ import { useSimulationState } from '../../hooks/useSimulationState';
 import NavigationButtons from '../common/NavigationButtons';
 import { personas } from '../../data/personas';
 
-const alexAvatar = '/ALEX_avatar.png';
+const alexAvatar = `${process.env.PUBLIC_URL}/ALEX_avatar.png`;
 const digitalWorkspaceBg = '/Digital_workspace_background.png';
 
 const Scene2Personas = () => {

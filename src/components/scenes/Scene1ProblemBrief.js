@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSimulationState } from '../../hooks/useSimulationState';
 import NavigationButtons from '../common/NavigationButtons';
-const sarahKimImage = '/Sarah_Kim_headshot.png';
-const conferenceRoomBg = '/Conference_room_background.png';
+const sarahKimImage = `${process.env.PUBLIC_URL}/Sarah_Kim_headshot.png`;
+const conferenceRoomBg = `${process.env.PUBLIC_URL}/Conference_room_background.png`;
 
 const Scene1ProblemBrief = () => {
   const { state, dispatch } = useSimulationState();

@@ -127,7 +127,7 @@ const Scene6Stakeholders = () => {
           <h3>Overall Satisfaction: {getOverallSatisfaction()}/5.0</h3>
           <div className="alex-analysis">
             <div className="alex-character">
-              <img src="/ALEX_avatar.png" alt="ALEX" className="alex-avatar" />
+              <img src={`${process.env.PUBLIC_URL}/ALEX_avatar.png`} alt="ALEX" className="alex-avatar" />
               <div className="alex-dialogue">
                 <h3>ALEX Analysis</h3>
                 <p>Overall satisfaction score of {getOverallSatisfaction()}/5.0 indicates {getOverallSatisfaction() >= 4 ? 'strong stakeholder approval' : 'areas for improvement'}.</p>

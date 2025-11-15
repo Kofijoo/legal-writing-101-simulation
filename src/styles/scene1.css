@@ -234,44 +234,72 @@
 @media (max-width: 768px) {
   .scene1 .scene-content {
     grid-template-columns: 1fr;
-    gap: var(--spacing-xl);
+    gap: var(--spacing-lg);
+    padding: var(--spacing-md);
   }
   
-  .character-section,
+  .character-section {
+    position: static;
+    padding: var(--spacing-lg);
+  }
+  
   .problem-identification {
     padding: var(--spacing-lg);
   }
   
   .character-image {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
   
   .character-dialogue h2 {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
+  }
+  
+  .character-dialogue p {
+    font-size: 0.9rem;
+  }
+  
+  .problem-list {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
   }
   
   .metrics {
     grid-template-columns: 1fr;
-    gap: var(--spacing-md);
+    gap: var(--spacing-sm);
   }
   
   .feedback-quotes {
     grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
   }
 }
 
 @media (max-width: 480px) {
+  .scene1 .scene-content {
+    padding: var(--spacing-sm);
+  }
+  
   .character-section,
   .problem-identification {
     padding: var(--spacing-md);
   }
   
   .data-dashboard {
-    padding: var(--spacing-lg);
+    padding: var(--spacing-md);
   }
   
   .problem-option {
-    padding: var(--spacing-md);
+    padding: var(--spacing-sm);
+    font-size: 0.8rem;
+  }
+  
+  .character-dialogue h2 {
+    font-size: 1.1rem;
+  }
+  
+  .character-dialogue p {
+    font-size: 0.85rem;
   }
 }

@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useSimulationState } from '../../hooks/useSimulationState';
 import NavigationButtons from '../common/NavigationButtons';
 
-const alexAvatar = '/ALEX_avatar.png';
+const alexAvatar = `${process.env.PUBLIC_URL}/ALEX_avatar.png`;
 const digitalWorkspaceBg = '/Digital_workspace_background.png';
 
 const Scene4Modality = () => {

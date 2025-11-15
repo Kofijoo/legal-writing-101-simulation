@@ -164,7 +164,7 @@ const Scene5CourseBuilder = () => {
       {courseModules.length >= 3 && (
         <div className="alex-analysis">
           <div className="alex-character">
-            <img src="/ALEX_avatar.png" alt="ALEX" className="alex-avatar" />
+            <img src={`${process.env.PUBLIC_URL}/ALEX_avatar.png`} alt="ALEX" className="alex-avatar" />
             <div className="alex-dialogue">
               <h3>ALEX Analysis</h3>
               <p>Solid structure! {courseModules.length} modules, {getTotalDuration()} minutes total.</p>
