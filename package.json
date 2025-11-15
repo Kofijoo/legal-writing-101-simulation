@@ -2,7 +2,7 @@
   "name": "legal-writing-101-simulation",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://your-username.github.io/legal-writing-101",
+  "homepage": "https://kofijoo.github.io/legal-writing-101-simulation",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
